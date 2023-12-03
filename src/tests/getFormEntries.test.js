@@ -1,6 +1,12 @@
+import path from 'node:path'
 import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import { getFormEntries } from '../getFormEntries.js'
 import { describe, test, expect } from '@jest/globals'
+
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 
 describe('getFormEntries()', () => {
@@ -47,7 +53,7 @@ describe('getFormEntries()', () => {
 
 
       test('one entry + entry "value" type === File', async () => { // https://stackoverflow.com/a/61731295/1549471
-        const file = readFileSync(`${__dirname}/smile.webp`)
+        const file = readFileSync(`${ __dirname }/smile.webp`)
         const buffer = Buffer.from(file)
         const blob = new Blob([buffer])
 
@@ -63,11 +69,11 @@ describe('getFormEntries()', () => {
 
 
       test('multiple entries + each entry "value" type === File + each entry has a different "name"', async () => { // https://stackoverflow.com/a/61731295/1549471
-        const file1 = readFileSync(`${__dirname}/smile.webp`)
+        const file1 = readFileSync(`${ __dirname }/smile.webp`)
         const buffer1 = Buffer.from(file1)
         const blob1 = new Blob([buffer1])
 
-        const file2 = readFileSync(`${__dirname}/laugh.webp`)
+        const file2 = readFileSync(`${ __dirname }/laugh.webp`)
         const buffer2 = Buffer.from(file2)
         const blob2 = new Blob([buffer2])
 
@@ -87,11 +93,11 @@ describe('getFormEntries()', () => {
 
 
       test('multiple entries + each entry "value" type === File + each entry has the same "name"', async () => { // https://stackoverflow.com/a/61731295/1549471
-        const file1 = readFileSync(`${__dirname}/smile.webp`)
+        const file1 = readFileSync(`${ __dirname }/smile.webp`)
         const buffer1 = Buffer.from(file1)
         const blob1 = new Blob([buffer1])
 
-        const file2 = readFileSync(`${__dirname}/laugh.webp`)
+        const file2 = readFileSync(`${ __dirname }/laugh.webp`)
         const buffer2 = Buffer.from(file2)
         const blob2 = new Blob([buffer2])
 
@@ -112,11 +118,11 @@ describe('getFormEntries()', () => {
 
 
       test('multiple entries + each entry "value" type is string or value', async () => { // https://stackoverflow.com/a/61731295/1549471
-        const file1 = readFileSync(`${__dirname}/smile.webp`)
+        const file1 = readFileSync(`${ __dirname }/smile.webp`)
         const buffer1 = Buffer.from(file1)
         const blob1 = new Blob([buffer1])
 
-        const file2 = readFileSync(`${__dirname}/laugh.webp`)
+        const file2 = readFileSync(`${ __dirname }/laugh.webp`)
         const buffer2 = Buffer.from(file2)
         const blob2 = new Blob([buffer2])
 
