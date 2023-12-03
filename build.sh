@@ -1,4 +1,5 @@
 #!/bin/bash
+pnpm badge &&
 rm -rf ./dist ./tsc &&
 pnpm tsc &&
 node ./esbuild.js &&

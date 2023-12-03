@@ -6,6 +6,9 @@
 pnpm add @feelinglovelynow/get-form-entries
 ```
 
+## 🤓 Unit Tests
+![Statements](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg?style=flat)
+
 
 ## 🙏 Description
 * Recieves Form Data and responds with an Object
@@ -62,6 +65,12 @@ const fields = getFormEntries(formData)
     }
   ]
 }
+```
+
+## 🔥 Errors we may throw
+* `getFormEntries()`
+```ts
+if (!(data instanceof FormData)) throw { id: 'fln__get-form-entries__invalid-data', message: 'Please pass getFormEntries() FormData', _errorData: { data } }
 ```
 
 
