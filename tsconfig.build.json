@@ -1,17 +1,19 @@
 {
   "files": [
-    "./src/tests/getFormEntries.test.js",
     "./src/getFormEntries.js",
     "./src/index.js"
   ],
   "compilerOptions": {
-    "noEmit": true,
     "allowJs": true,
     "checkJs": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
     "strict": true,
+    "outDir": "tsc",
+    "declarationMap": true,
     "module": "NodeNext",
     "target": "ES2017"
   }

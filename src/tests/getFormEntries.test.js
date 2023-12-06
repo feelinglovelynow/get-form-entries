@@ -16,7 +16,13 @@ describe('getFormEntries()', () => {
     const testValues = [ undefined, 1, 'foo', [], [ 1 ], [ 'foo' ], { hello: 'world' }, [ { hello: 'world' }] ]
 
     for (const testValue of testValues) {
-      try { getFormEntries(testValue) } catch (e) { expect(e).toEqual({ id, message, _errorData: { data: testValue } }) }
+      let error
+
+      // @ts-ignore
+      try { getFormEntries(testValue) }
+      catch (e) { error = e }
+
+      expect(error).toEqual({ id, message, _errorData: { data: testValue } })
     }
   })
 
