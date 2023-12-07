@@ -7,8 +7,9 @@
  * Converts `<input name="image" />` into `{ image: File }`.
  * Converts `<input name="images" multiple />` into `{ images: File[] }`.
  * @param { FormData } data 
+ * @throws { { id: 'fln__get-form-entries__invalid-data', message: 'Please pass getFormEntries() FormData', _errorData: { data } } } - `IF (!(data instanceof FormData))`
  * @returns { GetFormEntriesResponse }
- */
+*/
 export function getFormEntries (data) {
   if (!(data instanceof FormData)) throw { id: 'fln__get-form-entries__invalid-data', message: 'Please pass getFormEntries() FormData', _errorData: { data } }
   else {

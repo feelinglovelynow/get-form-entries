@@ -1,7 +1,7 @@
 {
   "files": [
-    "./src/getFormEntries.js",
-    "./src/index.js"
+    "src/getFormEntries.js",
+    "src/index.js"
   ],
   "compilerOptions": {
     "allowJs": true,

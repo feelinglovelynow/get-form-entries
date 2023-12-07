@@ -1,6 +1,6 @@
 {
   "name": "@feelinglovelynow/get-form-entries",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Recieves Form Data and responds with an Object",
   "author": "https://github.com/feelinglovelynow?tab=repositories",
   "license": "MIT",

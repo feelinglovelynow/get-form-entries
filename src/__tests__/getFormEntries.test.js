@@ -54,7 +54,8 @@ describe('getFormEntries()', () => {
         const formData = new FormData()
         formData.append('foo', 'bar')
         formData.append('foo', 'world')
-        expect(getFormEntries(formData)).toEqual({ foo: ['bar', 'world'] })
+        formData.append('foo', 'hello world')
+        expect(getFormEntries(formData)).toEqual({ foo: ['bar', 'world', 'hello world'] })
       })
 
 

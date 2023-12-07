@@ -1,8 +1,8 @@
 {
   "files": [
-    "./src/tests/getFormEntries.test.js",
-    "./src/getFormEntries.js",
-    "./src/index.js"
+    "src/__tests__/getFormEntries.test.js",
+    "src/getFormEntries.js",
+    "src/index.js"
   ],
   "compilerOptions": {
     "noEmit": true,
